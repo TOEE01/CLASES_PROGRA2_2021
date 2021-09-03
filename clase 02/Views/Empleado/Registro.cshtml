@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <label for="nombre">Nombre</label>
+    <br>
+    <input type="text" name="nombre" , requared placeholder="Escribe tu nombre">
+    <br>
+    <label for="dui">Apellido</label>
+    <br>
+    <input type="text" name="Apellido" require>
+    <br>
+    <label for="dui">DUI</label>
+    <br>
+    <input type="number" name="dui" required>
+    <br>
+    <label for="direccion">Direccion</label>
+    <br>
+    <input type="text" name="direccion" required>
+    <br>
+    <label for="telefono">Telefono</label>
+    <br>
+    <input type="tel" name="telefono" required>
+    <br>
+    <label for="correo">E-mail</label>
+    <br>
+    <input type="email" name="correo" required>
+    <br>
+    <input type="submit">
+    <br>
+}
+
+</body>

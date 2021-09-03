@@ -1,0 +1,19 @@
+﻿@model clase_02.Models.Viewmodels.PersonaWiewModels
+@{
+    ViewBag.Title = "personaViewmodels";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("DescricionPersonaViewModel", "Persona", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Id)
+    @Html.TextBoxFor(m => m.Id)
+    @Html.ValidationMessageFor(m => m.Id, null, new { @class = "red" })
+
+    @Html.LabelFor(m => m.Nombre)
+    @Html.TextBoxFor(m => m.Nombre)
+    @Html.ValidationMessageFor(m => m.Nombre, null, new { @class = "red" })
+
+
+}
+

@@ -1,0 +1,45 @@
+﻿@model List<clase_02.Models.ClsPersona>
+@{
+    ViewBag.Title = "Descripcion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Descripcion", "Persona",FormMethod.Get))
+{
+    <label>Agrega tu nombre</label>
+    <input type="text" name="variable"/>
+
+    <input type="submit"/>
+
+}
+
+
+<h1>@ViewBag.variabledinamica</h1>
+<table class="table table-success table-striped">
+    <thead>
+    <th>
+        Id
+    </th>
+    <th>
+        Nombe
+    </th>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nombre</td>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+

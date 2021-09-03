@@ -1,0 +1,55 @@
+﻿@model List< clase_02.Models.tbl_empleados>
+@{
+    ViewBag.Title = "Empleado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Empleado</h2>
+
+<h1>@ViewBag.variabledinamica</h1>
+<table class="table table-dark table-striped">
+    <thead>
+    <th>
+        Nombre
+    </th>
+    <th>
+        Apellido
+    </th>
+    <th>
+        DUI
+    </th>
+    <th>
+        Direccion
+    </th>
+    <th>
+        Telefono
+    </th>
+    <th>
+        Email
+    </th>
+    <th>
+        Cargo
+    </th>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Empl_nombre</td>
+                <td>@item.Empl_apellido</td>
+                <td>@item.Empl_DUI</td>
+                <td>@item.Empl_direccion</td>
+                <td>@item.Empl_telefono</td>
+                <td>@item.Empl_email</td>
+                <td>@item.Empl_cargo</td>
+                <td>@Html.ActionLink("Eliminar","Delete",new { id= item.id_persona}, new {@class = "btn btn-danger"})</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
